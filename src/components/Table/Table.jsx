@@ -80,13 +80,11 @@ export default function BasicTable() {
 
   // console.log(allCategories)
 
-  
-
   console.log(data);
   const filterSelected = (category) => {
     console.log(category);
     if (category === "all") {
-      setData(Data)
+      setData(Data);
       return;
     }
     const newData = oldData.filter((item) => item.category === category);
@@ -101,34 +99,32 @@ export default function BasicTable() {
   return (
     <div className="Table">
       <h3>Recent Orders</h3>
-      <div
-        // component={Paper}
-
-        style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
-      >
+      <div style={{ boxShadow: "0px 13px 20px 0px #80808029" }}>
         <table
           style={{ width: "100%", background: "#fff", paddingLeft: "1rem" }}
-          // sx={{ minWidth: 650 }} aria-label="simple table"
         >
-          {/* <TableHead> */}
-          <tr
-            style={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            {tableHead.map((item) => {
-              return (
-                <>
-                  {item.id !== 2 ? (
-                    <div style={{ minWidth: "150px" }}>
-                      {" "}
-                      <th align="left">{item.heading}</th>
-                    </div>
-                  ) : (
-                    <div style={{ minWidth: "150px" }}>
+          <thead>
+            <tr
+              style={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-between",
+              }}
+            >
+              {tableHead.map((item) => {
+                return (
+                  <>
+                    {item.id !== 2 ? (
                       <th
+                        key={item.id}
+                        style={{ minWidth: "150px" }}
+                        align="left"
+                      >
+                        {item.heading}
+                      </th>
+                    ) : (
+                      <th
+                        style={{ minWidth: "150px" }}
                         align="left"
                         onClick={() => setCategorySelect(!categorySelect)}
                       >
@@ -137,6 +133,7 @@ export default function BasicTable() {
                           <div className="categoryCont">
                             {interestList.map((item) => (
                               <div
+                                key={item.id}
                                 className="categorySelect"
                                 onClick={() => filterSelected(item.interest)}
                               >
@@ -146,54 +143,44 @@ export default function BasicTable() {
                           </div>
                         )}
                       </th>
-                    </div>
-                  )}
-                </>
-              );
-            })}
-          </tr>
-
+                    )}
+                  </>
+                );
+              })}
+            </tr>
+          </thead>
           {data?.map((item) => (
-            <>
+            <thead key={item.id}>
               <tr className="creator-table-section">
-                <div
-                  className="dataDiv"
-                  // style={{
-                  //   display: "flex",
-                  //   justifyContent: "space-between",
-                  //   margin: "1rem",
-                  // }}
+                <td
+                  style={{ minWidth: "150px", cursor: "pointer" }}
+                  onClick={() => handleClick(item.id)}
                 >
-                  <td
-                    style={{ minWidth: "150px", cursor: "pointer" }}
-                    onClick={() => handleClick(item.id)}
-                  >
-                    {item.creator}
-                  </td>
-                  <td style={{ minWidth: "150px" }} align="left">
-                    {item.category}
-                  </td>
-                  <td style={{ minWidth: "150px" }}>{item.Views}</td>
-                  <td style={{ minWidth: "150px" }}>{item.supporters}</td>
-                </div>
-                {/* </td> */}
-                {item?.subContainer?.map((item) => {
-                  return (
-                    <>
-                      {subid === item.parentId && creatorSelect ? (
-                        <div className="creatorDetails">
-                          {item.latestVideos?.map((url) => {
-                            return <div>Videos: {url.url}</div>;
-                          })}
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                    </>
-                  );
-                })}
+                  {item.creator}
+                </td>
+                <td style={{ minWidth: "150px" }} align="left">
+                  {item.category}
+                </td>
+                <td style={{ minWidth: "150px" }}>{item.Views}</td>
+                <td style={{ minWidth: "150px" }}>{item.supporters}</td>
               </tr>
-            </>
+
+              {item?.subContainer?.map((item) => {
+                return (
+                  <>
+                    {subid === item.parentId && creatorSelect ? (
+                      <div className="creatorDetails">
+                        {item.latestVideos?.map((url) => {
+                          return <div>Videos: {url.url}</div>;
+                        })}
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                );
+              })}
+            </thead>
           ))}
         </table>
       </div>
