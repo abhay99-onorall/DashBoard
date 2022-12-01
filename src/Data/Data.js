@@ -150,19 +150,19 @@ export const Data = [
       {
         latestVideos: [
           {
-            id:1,
+            id: 1,
             url: "example1.com"
           },
           {
-            id:2,
+            id: 2,
             url: "example2.com"
           },
           {
-            id:3,
+            id: 3,
             url: "example3.com"
           },
           {
-            id:4,
+            id: 4,
             url: "example4.com"
           },
         ],
@@ -181,15 +181,15 @@ export const Data = [
         latestVideos: [
           {
             id: 1,
-            url:"https://example1.com"
+            url: "https://example1.com"
           },
           {
             id: 2,
-            url:"https://example1.com"
+            url: "https://example1.com"
           },
           {
             id: 3,
-            url:"https://example1.com"
+            url: "https://example1.com"
           },
         ],
         parentId: 2,
@@ -207,7 +207,7 @@ export const Data = [
         latestVideos: [
           {
             id: 1,
-            url:"https://example1.com"
+            url: "https://example1.com"
           }
         ],
         parentId: 3,
@@ -224,12 +224,12 @@ export const Data = [
       {
         latestVideos: [
           {
-            id:1,
-            url:"https://example.com",
+            id: 1,
+            url: "https://example.com",
           },
           {
-            id:2,
-            url:"https://example2.com",
+            id: 2,
+            url: "https://example2.com",
           },
         ],
         parentId: 4,
@@ -246,7 +246,7 @@ export const Data = [
       {
         latestVideos: [
           {
-            url:"https://example.com",
+            url: "https://example.com",
           }
         ],
         parentId: 5,
@@ -273,4 +273,87 @@ export const tableHead = [
     id: 4,
     heading: "Supporters",
   },
+    
 ];
+
+
+export const ReportData = [
+  {
+    contentId: 1,
+    VideoTitle: "Main Pareshan",
+    Report: [{
+      id: 1,
+      userid: "TwziSDKjdsi",
+      reportTitle: "Misleading content",
+      reportDescription: "Video is Misleading, should be removed from the platform",
+      parentId: 1,
+    },
+  {
+    id: 2,
+    userid: "TwziSDKjdsj",
+    reportTitle: "Misleading content2",
+    reportDescription: "Video is Misleading, should be removed from the platform tpoj",
+    parentid: 1,
+  },
+  {
+    id: 3,
+    userid: "TwziSDKjdsk",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 1,
+  },
+  {
+    id: 4,
+    userid: "TwziSDKjdsl",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 1,
+  },
+  {
+    id: 5,
+    userid: "TwziSDKjdsm",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 1,
+  }],
+},
+  {
+    contentId: 2,
+    VideoTitle: "Main Pareshan hoon",
+    Report: [{
+      id: 1,
+      userid: "TwziSDKjdsi",
+      reportTitle: "Misleading content",
+      reportDescription: "Video is Misleading, should be removed from the platform",
+      parentId: 2,
+    },
+  {
+    id: 2,
+    userid: "TwziSDKjdsj",
+    reportTitle: "Misleading content2",
+    reportDescription: "Video is Misleading, should be removed from the platform tpoj",
+    parentid: 2,
+  },
+  {
+    id: 3,
+    userid: "TwziSDKjdsk",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 2,
+  },
+  {
+    id: 4,
+    userid: "TwziSDKjdsl",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 2,
+  },
+  {
+    id: 5,
+    userid: "TwziSDKjdsm",
+    reportTitle: "Misleading content",
+    reportDescription: "Video is Misleading, should be removed from the platform",
+    parentid: 1,
+  }],
+},
+]

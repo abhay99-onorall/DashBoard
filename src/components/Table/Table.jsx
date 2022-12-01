@@ -91,7 +91,7 @@ export default function BasicTable() {
     setData(newData);
   };
 
-  const handleClick = (data) => {
+  const handleClick = (data) => { 
     setSubid(data);
     setCreatorSelect(!creatorSelect);
   };
