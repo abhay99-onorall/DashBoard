@@ -8,7 +8,7 @@ import { motion, AnimateSharedLayout } from "framer-motion";
 
 function App() {
 
-  const [selected, setSelected] = useState(1);
+  const [selected, setSelected] = useState(2);
   return (
     <motion.div className="App">
       <div className="AppGlass">

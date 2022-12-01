@@ -1,0 +1,55 @@
+.report-table {
+	width: 100%;
+	box-shadow: 0px 13px 20px 0px #80808029;
+	background-color: #fff;
+}
+
+.table-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.table-row2 {
+	display: flex;
+	flex-direction: column;
+}
+
+/* .table-heading{
+	min-width: 150px;
+	white-space:normal;
+} */
+
+.table-row>th,
+td {
+	min-width: 150px;
+	max-width: 150px;
+	white-space: pre;
+}
+
+td {
+	text-align: center;
+}
+
+.message {
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid red;
+}
+
+.underDiv {
+	width: 100%;
+	border: 2px solid red;
+}
+
+
+@media screen and (max-width: 1200px) {
+	.report-table {
+		width: 170%;
+		margin-top: 2rem;
+	}
+}
