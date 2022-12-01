@@ -1,0 +1,132 @@
+.setTimelineTitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #6247aa;
+  }
+  
+  .timeline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 1rem 0;
+  }
+  
+  .timeline input {
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #6247aa;
+    width: 40px;
+    border-bottom: 3px solid #6247aa;
+    margin: 0 5px;
+  }
+  
+  .timeline input::-webkit-input-placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c7c7c7;
+  }
+  
+  .timeline input::-moz-placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c7c7c7;
+  }
+  
+  .timeline input:-ms-input-placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c7c7c7;
+  }
+  
+  .timeline input::-ms-input-placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c7c7c7;
+  }
+  
+  .timeline input::placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #c7c7c7;
+  }
+  
+  .colon,
+  .timelineTo,
+  .timeline label {
+    color: #6247aa;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .timelineIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* justify-content: space-between; */
+  }
+  
+  .deleteTimelineIcon,
+  .saveTimelineIcon {
+    font-size: 1rem;
+    /* width: 25px;
+    height: 25px; */
+    padding: 4px;
+    border-radius: 50px;
+    overflow: visible;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  .deleteTimelineIcon:hover,
+  .saveTimelineIcon:hover {
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  .saveTimelineIcon {
+    padding: 0.2rem 0.6rem;
+    background-color: #94FDB2;
+    color: #009229;
+    margin-right: 10px;
+  }
+  
+  .saveTimelineIcon.active {
+    background: gray;
+    color: white;
+    pointer-events: none;
+  }
+  
+  .deleteTimelineIcon {
+    font-size: 1.9rem;
+    background-color: #ffb8c0;
+  }
+  
+  .message {
+    font-size: 14px;
+    border-width: bold;
+    color: #1abc9c;
+    background-color: #b8edce;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 70%;
+    text-align: center;
+  }/*# sourceMappingURL=Timeline.module.css.map */

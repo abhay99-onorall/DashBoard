@@ -63,8 +63,10 @@ export default function BasicTable() {
   const [creatorSelect, setCreatorSelect] = useState(false);
   const [subid, setSubid] = useState(0);
 
-  // const allCategories = ["all", ...new Set(data?.map((item)=> item.category
-  // ))]
+  const allCategories = ["all", ...new Set(data?.map((item)=> item.category
+  ))]
+
+  console.log(allCategories)
   const fetchData = async () => {
     const res = await axios.get("https://retoolapi.dev/eRVegk/data");
     // setData(res?.data);
@@ -80,7 +82,6 @@ export default function BasicTable() {
 
   // console.log(allCategories)
 
-  console.log(data);
   const filterSelected = (category) => {
     console.log(category);
     if (category === "all") {
@@ -153,7 +154,7 @@ export default function BasicTable() {
             <thead key={item.id}>
               <tr className="creator-table-section">
                 <td
-                  style={{ minWidth: "150px", cursor: "pointer" }}
+                  style={{ minWidth: "150px", cursor: "pointer" }} align="left"
                   onClick={() => handleClick(item.id)}
                 >
                   {item.creator}
@@ -161,8 +162,8 @@ export default function BasicTable() {
                 <td style={{ minWidth: "150px" }} align="left">
                   {item.category}
                 </td>
-                <td style={{ minWidth: "150px" }}>{item.Views}</td>
-                <td style={{ minWidth: "150px" }}>{item.supporters}</td>
+                <td style={{ minWidth: "150px" }} align="left">{item.Views}</td>
+                <td style={{ minWidth: "150px" }} align="left">{item.supporters}</td>
               </tr>
 
               {item?.subContainer?.map((item) => {

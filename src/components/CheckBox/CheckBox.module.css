@@ -1,0 +1,292 @@
+.checkBoxContainer {
+    width: 100%;
+    min-width: 0;
+  }
+  
+  /* --- The container --- */
+  .container,
+  .containerPurple,
+  .containerWhite,
+  .containerRoundedBlue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    text-transform: capitalize;
+    /* border-radius: 50rem;
+    padding: .3rem; */
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 22px;
+    gap: 0.6rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+  
+  .containerRoundedBlue {
+    font-size: 16px;
+    line-height: 0;
+    border-radius: 50rem;
+    padding: 0.5rem 0.5rem;
+    /* border: 2px solid #136ca8; */
+    /* overflow: hidden; */
+    color: #136ca8;
+  }
+  
+  .checkboxBackground,
+  .checkboxBackgroundPurple,
+  .checkboxBackgroundWhite {
+    display: none;
+  }
+  
+  .checkboxBackgroundRoundedBlue {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    /* background-color: #f00; */
+    border: 2px solid #136ca8;
+    width: 100%;
+    height: 100%;
+    border-radius: 50rem;
+    left: -0.01rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .labelBeforeCheckBoxClass {
+    margin-left: 0.3rem;
+    z-index: 2;
+  }
+  
+  .labelAfterCheckBoxClass {
+    margin-right: 0.3rem;
+    z-index: 2;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input,
+  .containerPurple input,
+  .containerWhite input,
+  .containerRoundedBlue input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark,
+  .checkmarkPurple,
+  .checkmarkWhite,
+  .checkmarkRoundedBlue {
+    position: relative;
+    overflow: hidden;
+    height: 25px;
+    width: 25px;
+    min-height: 25px;
+    min-width: 25px;
+    border-radius: 5px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 2px solid #6247aa;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  
+  .checkmarkWhite {
+    border-color: #e2cfea;
+  }
+  
+  .checkmarkRoundedBlue {
+    height: 20px;
+    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    border-color: #136ca8;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container input:hover ~ .checkmark,
+  .containerPurple input:hover ~ .checkmarkPurple {
+    background-color: #ccc;
+    border-color: #331978;
+  }
+  
+  .containerWhite input:hover ~ .checkmarkWhite {
+    background-color: rgba(255, 255, 255, 0.39);
+    border-color: rgb(230, 230, 230);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  .containerRoundedBlue input:hover ~ .checkboxBackgroundRoundedBlue,
+  .containerRoundedBlue input:hover ~ .checkmarkRoundedBlue {
+    background-color: #e9f1f5;
+    border-color: #004777;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  /* When the checkbox is checked, add a background color */
+  .container input:checked ~ .checkmark,
+  .containerPurple input:checked ~ .checkmarkPurple {
+    background-color: #6247aa;
+  }
+  
+  .containerWhite input:checked ~ .checkmarkWhite {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  .containerRoundedBlue input:checked ~ .checkboxBackgroundRoundedBlue {
+    background-color: #c3e7ff;
+    border-color: #c3e7ff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  .container input:checked:hover ~ .checkmark,
+  .containerPurple input:checked:hover ~ .checkmarkPurple {
+    background-color: #331978;
+  }
+  
+  .containerWhite input:checked:hover ~ .checkmarkWhite {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(230, 230, 230);
+  }
+  
+  .containerRoundedBlue input:checked:hover ~ .checkboxBackgroundRoundedBlue,
+  .containerRoundedBlue input:checked:hover ~ .checkmarkRoundedBlue {
+    opacity: 0.6;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  
+  /* .container input:hover ~ .checkmark span {
+    display: block;
+    transform: rotate(45deg) scale(1, 1);
+    border: solid #c5b6ed;
+    border-width: 0 3px 3px 0;
+  } */
+  .container input:checked:hover ~ .checkmark span,
+  .containerPurple input:checked:hover ~ .checkmarkPurple span {
+    border-color: #fff;
+  }
+  
+  .containerWhite input:checked:hover ~ .checkmarkWhite span {
+    border-color: #6247aa;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark span,
+  .checkmarkPurple span,
+  .checkmarkWhite span,
+  .checkmarkRoundedBlue span {
+    /* content: ""; */
+    position: relative;
+    display: block;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    border-width: 0 3px 3px 0;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark span,
+  .containerPurple input:checked ~ .checkmarkPurple span,
+  .containerWhite input:checked ~ .checkmarkWhite span,
+  .containerRoundedBlue input:checked ~ .checkmarkRoundedBlue span {
+    /* width: 6px;
+    height: 14px; */
+    -webkit-transform: rotate(45deg) scale(1, 1);
+    transform: rotate(45deg) scale(1, 1);
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+  
+  .containerWhite input:checked ~ .checkmarkWhite span {
+    border-color: #6247aa;
+  }
+  
+  .containerRoundedBlue input:checked ~ .checkmarkRoundedBlue span {
+    border-color: #136ca8;
+    border-width: 0 3px 3px 0;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark span,
+  .containerPurple .checkmarkPurple span,
+  .containerWhite .checkmarkWhite span,
+  .containerRoundedBlue .checkmarkRoundedBlue span {
+    /* left: 9px; */
+    width: 9px;
+    height: 15px;
+    bottom: 2px;
+    border-radius: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) scale(0, 0);
+  }
+  
+  .containerRoundedBlue .checkmarkRoundedBlue span {
+    width: 6px;
+    height: 12px;
+    bottom: 0;
+  }
+  
+  @media only screen and (max-width: 800px), (max-height: 600px) {
+    .container,
+  .containerPurple,
+  .containerWhite,
+  .containerRoundedBlue {
+      font-size: 16px;
+      /* gap: 0.6rem; */
+    }
+    .checkmark,
+  .checkmarkPurple,
+  .checkmarkWhite {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      border-radius: 3px;
+      border-width: 1px;
+    }
+    .container .checkmark span,
+  .containerPurple .checkmarkPurple span,
+  .containerWhite .checkmarkWhite span {
+      width: 6px;
+      height: 10px;
+      bottom: 1px;
+    }
+    .container input:checked ~ .checkmark span,
+  .containerPurple input:checked ~ .checkmarkPurple span,
+  .containerWhite input:checked ~ .checkmarkWhite span {
+      border-width: 0 2px 2px 0;
+    }
+    /* .containerRoundedBlue {
+      font-size: 16px;
+      line-height: 0;
+      border-radius: 50rem;
+      padding: 0.5rem 0.5rem;
+    } */
+  }/*# sourceMappingURL=CheckBox.module.css.map */
